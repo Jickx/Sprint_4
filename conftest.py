@@ -1,5 +1,5 @@
 import pytest
-from main import BooksCollector
+from books_collector import BooksCollector
 
 
 @pytest.fixture
