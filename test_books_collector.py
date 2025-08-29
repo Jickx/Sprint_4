@@ -91,10 +91,7 @@ class TestBooksCollector:
             'Анна Каренина против вампиров': 'Комедии',
             'Тихий Дон и громкая вечеринка': 'Мультфильмы'
         }
-        adult_books = [
-            'Гордость и предубеждение и зомби',
-            'Что делать, если ваш кот хочет вас убить'
-        ]
+        adult_books = [name for name, genre in collector.books_genre.items() if genre in collector.genre_age_rating]
         children_books = collector.get_books_for_children()
         for adult_book in adult_books:
             assert adult_book not in children_books
