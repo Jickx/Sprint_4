@@ -22,7 +22,8 @@ pip install -r requirements.txt
 ## Запуск тестов
 
 ```bash
-pytest -v
+pytest -v # Запуск тестов
+pytest --cov=books_collector --cov-report=html # Запуск тестов с формированием отчёта с покрытием
 ```
 
 ## Реализованные тесты
