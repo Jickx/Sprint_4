@@ -95,8 +95,9 @@ class TestBooksCollector:
             'Гордость и предубеждение и зомби',
             'Что делать, если ваш кот хочет вас убить'
         ]
+        children_books = collector.get_books_for_children()
         for adult_book in adult_books:
-            assert adult_book not in collector.get_books_for_children()
+            assert adult_book not in children_books
 
     def test_add_book_in_favorites_adds_book_in_favorites(self, collector):
         name = 'Гордость и предубеждение и зомби'
